@@ -2,191 +2,69 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import HeroImg from "../assets/HeroImg.jpg";
+import InnovationImg from "../assets/InnovationTeam.jpg"; // right-side image
 
 const Header = () => {
   const [nav, setNav] = useState(false);
   const handleNav = () => setNav(!nav);
 
+     const linkClass = ({ isActive }) =>
+    isActive
+      ? "relative text-blue-400 font-semibold after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-blue-400 after:left-0 after:-bottom-1"
+      : "text-gray-200 hover:text-blue-300 hover:after:content-[''] hover:after:absolute hover:after:w-full hover:after:h-[2px] hover:after:bg-blue-300 hover:after:left-0 hover:after:-bottom-1 transition duration-300 relative";
+
+  
   return (
-    <div className="text-white bg-[#011E5F] h-16 w-full relative">
-      <div className="flex items-center justify-between max-w-[1380px] mx-auto px-4 h-full w-full">
-        {/* Image/Logo */}
-        <div className="flex items-center">
-          <img src={HeroImg} alt="HIN" className="w-12 h-12 rounded-full" />
-          <p className="font-bold text-[40px] ml-2">DB</p>
+    <nav className="bg-gradient-to-r from-[#011E5F] to-[#020C3A] shadow-lg fixed top-0 w-full z-50">
+      <div className="flex items-center justify-between max-w-[1300px] mx-auto px-4 py-3">
+        {/* Logo */}
+        <div className="flex items-center space-x-3">
+          <img src={HeroImg} alt="HIN" className="w-12 h-12 rounded-full border-2 border-blue-400" />
+          <p className="font-extrabold text-[28px] text-white tracking-wide">DB<span className="text-blue-400">.</span></p>
         </div>
 
-        {/* Links for large screens */}
-        <ul className="hidden md:flex space-x-4 mx-auto">
-          <li className="p-2 cursor-pointer">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[#020915] border-b-2 border-blue-[#020915] font-bold"
-                  : "text-[#DEDEDE] hover:text-blue-500 transition duration-200 font-medium"
-              }
-            >
-              Home
-            </NavLink>
-          </li>
-          <li className="p-2 cursor-pointer">
-            <NavLink
-              to="/portfolio"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[#020915] border-b-2 border-blue-[#020915] font-bold"
-                  : "text-[#DEDEDE] hover:text-blue-500 transition duration-200 font-medium"
-              }
-            >
-              Portfolio
-            </NavLink>
-          </li>
-          <li className="p-2 cursor-pointer">
-            <NavLink
-              to="/services"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[#020915] border-b-2 border-blue-[#020915] font-bold"
-                  : "text-[#DEDEDE] hover:text-blue-500 transition duration-200 font-medium"
-              }
-            >
-              Services
-            </NavLink>
-          </li>
-          <li className="p-2 cursor-pointer">
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[#020915] border-b-2 border-blue-[#020915] font-bold"
-                  : "text-[#DEDEDE] hover:text-blue-500 transition duration-200 font-medium"
-              }
-            >
-              About
-            </NavLink>
-          </li>
-          <li className="p-2 cursor-pointer">
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[#020915] border-b-2 border-blue-[#020915] font-bold"
-                  : "text-[#DEDEDE] hover:text-blue-500 transition duration-200 font-medium"
-              }
-            >
-              Contact
-            </NavLink>
-          </li>
-          <li className="p-2 cursor-pointer">
-            <NavLink
-              to="/blog"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[#020915] border-b-2 border-blue-[#020915] font-bold"
-                  : "text-[#DEDEDE] hover:text-blue-500 transition duration-200 font-medium"
-              }
-            >
-              Blog
-            </NavLink>
-          </li>
+        {/* Desktop Links */}
+        <ul className="hidden md:flex space-x-8 text-lg">
+          <li><NavLink to="/" className={linkClass}>Home</NavLink></li>
+          <li><NavLink to="/portfolio" className={linkClass}>Portfolio</NavLink></li>
+          <li><NavLink to="/services" className={linkClass}>Services</NavLink></li>
+          <li><NavLink to="/about" className={linkClass}>About</NavLink></li>
+          <li><NavLink to="/contact" className={linkClass}>Contact</NavLink></li>
+          <li><NavLink to="/blog" className={linkClass}>Blog</NavLink></li>
         </ul>
 
-        {/* Contact Us button for large screens */}
-        <button className="hidden md:block bg-[#0D0D0F] text-white py-2 px-8 rounded-full">
-          Contact
+        {/* Button */}
+        <button className="hidden md:block bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-full font-semibold shadow-md transition duration-300">
+          Hire Us
         </button>
 
-        {/* Menu icon for small screens */}
-        <div className="md:hidden" onClick={handleNav}>
-          {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
+        {/* Mobile Menu Icon */}
+        <div className="md:hidden text-white cursor-pointer" onClick={handleNav}>
+          {nav ? <AiOutlineClose size={26} /> : <AiOutlineMenu size={26} />}
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       <div
-        className={`${
-          nav ? "left-0" : "-left-full"
-        } md:hidden flex flex-col top-18 w-[60%] h-screen bg-black font-bold ease-in-out duration-500 fixed`}
+        className={`fixed md:hidden top-0 left-0 h-screen w-[70%] bg-[#020C3A]/95 backdrop-blur-md p-6 pt-20 transform transition-transform duration-500 ease-in-out ${
+          nav ? "translate-x-0" : "-translate-x-full"
+        }`}
       >
-        <ul className="uppercase p-4">
-          <li className="p-4 cursor-pointer border-b border-gray-600">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-blue-500 border-b-2 border-blue-500"
-                  : "hover:text-blue-500 transition duration-300"
-              }
-            >
-              Home
-            </NavLink>
-          </li>
-          <li className="p-4 cursor-pointer border-b border-gray-600">
-            <NavLink
-              to="/portfolio"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-blue-500 border-b-2 border-blue-500"
-                  : "hover:text-blue-500 transition duration-300"
-              }
-            >
-              Portfolio
-            </NavLink>
-          </li>
-          <li className="p-4 cursor-pointer border-b border-gray-600">
-            <NavLink
-              to="/services"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-blue-500 border-b-2 border-blue-500"
-                  : "hover:text-blue-500 transition duration-300"
-              }
-            >
-              Services
-            </NavLink>
-          </li>
-          <li className="p-4 cursor-pointer border-b border-gray-600">
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-blue-500 border-b-2 border-blue-500"
-                  : "hover:text-blue-500 transition duration-300"
-              }
-            >
-              About
-            </NavLink>
-          </li>
-          <li className="p-4 cursor-pointer border-b border-gray-600">
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-blue-500 border-b-2 border-blue-500"
-                  : "hover:text-blue-500 transition duration-300"
-              }
-            >
-              Contact
-            </NavLink>
-          </li>
-          <li className="p-4 cursor-pointer border-b border-gray-600">
-            <NavLink
-              to="/blog"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-blue-500 border-b-2 border-blue-500"
-                  : "hover:text-blue-500 transition duration-300"
-              }
-            >
-              Blog
-            </NavLink>
-          </li>
+        <ul className="space-y-6 text-white text-lg font-medium">
+          <li><NavLink to="/" className={linkClass} onClick={handleNav}>Home</NavLink></li>
+          <li><NavLink to="/portfolio" className={linkClass} onClick={handleNav}>Portfolio</NavLink></li>
+          <li><NavLink to="/services" className={linkClass} onClick={handleNav}>Services</NavLink></li>
+          <li><NavLink to="/about" className={linkClass} onClick={handleNav}>About</NavLink></li>
+          <li><NavLink to="/contact" className={linkClass} onClick={handleNav}>Contact</NavLink></li>
+          <li><NavLink to="/blog" className={linkClass} onClick={handleNav}>Blog</NavLink></li>
         </ul>
-        <button>Hire Us ?</button>
+        <div className="mt-10">
+          <button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-full font-semibold shadow-md transition duration-300">
+            Hire Us
+          </button>
+        </div>
       </div>
-    </div>
+    </nav>
   );
-};
-
+}
 export default Header;
