@@ -8,8 +8,11 @@ import OurStory from "../Components/OurStory";
 import ContactUsSection from "../Components/Contactus";
 import Footer from "../Components/Footer";
 import BlogSection from "../Components/Blog";
-
-
+import FAQSection from "../Components/FAQ";
+import ServicesSection from "../Components/Services";
+import TestimonialSection from "../Components/Tesmonies";
+import AboutCEO from "../Components/CEO";
+import TeamSection from "../Components/AboutTeam";
 
 const PortfolioPage = () => {
   return (
@@ -19,6 +22,11 @@ const PortfolioPage = () => {
       <PortfolioSection/>
       <AboutUsSection/>
       <OurStory/>
+      <AboutCEO/>
+      <TeamSection/>
+      <ServicesSection/>
+      <TestimonialSection/>
+      <FAQSection/>
       <ContactUsSection/>
       <Footer/>
     </>
