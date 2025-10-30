@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "../Components/HeroSection";
 import { pages } from "../assets/pages";
 import HomePage from "./Home";
+import Header from "../Components/Header";
 
 const ContactPage = () => {
   return (
