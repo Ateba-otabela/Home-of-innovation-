@@ -2,6 +2,7 @@ import React from "react";
 import HeroImg from "../assets/HeroImg.jpg"; // Replace with your own image
 import InnovationImg from "../assets/InnovationTeam.jpg"; // right-side image
 
+
 const HomePage = () => {
   return (
 <section

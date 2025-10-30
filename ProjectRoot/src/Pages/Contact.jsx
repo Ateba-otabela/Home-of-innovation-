@@ -2,14 +2,33 @@ import React from "react";
 import HeroSection from "../Components/HeroSection";
 import { pages } from "../assets/pages";
 import HomePage from "./Home";
-import Header from "../Components/Header";
+import PortfolioSection from "../Components/Portfolio";
+import AboutUsSection from "../Components/AboutUs";
+import OurStory from "../Components/OurStory";
+import ContactUsSection from "../Components/Contactus";
+import Footer from "../Components/Footer";
+import BlogSection from "../Components/Blog";
+import FAQSection from "../Components/FAQ";
+import ServicesSection from "../Components/Services";
+import TestimonialSection from "../Components/Tesmonies";
+import AboutCEO from "../Components/CEO";
+import TeamSection from "../Components/AboutTeam";
 
 const ContactPage = () => {
   return (
     <>
-      <HomePage/>
-      <HeroSection currPage={pages.CONTACT} />
-      <div className="w-full h-screen bg-[#03040C]">Contact Page</div>
+    <HomePage/>
+      <BlogSection/>
+      <PortfolioSection/>
+      <AboutUsSection/>
+      <OurStory/>
+      <AboutCEO/>
+      <TeamSection/>
+      <ServicesSection/>
+      <TestimonialSection/>
+      <FAQSection/>
+      <ContactUsSection/>
+      <Footer/>
     </>
   );
 };

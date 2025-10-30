@@ -35,7 +35,7 @@ const aboutPoints = [
 
 const AboutUsSection = () => {
   return (
-    <section className="bg-[#03040C] text-white py-20 px-6 md:px-20">
+    <section className="bg-[#03040C] text-white py-20 px-6 md:px-20"  id="about">
       <div className="max-w-[1300px] mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
           About <span className="text-blue-400">Us</span>
