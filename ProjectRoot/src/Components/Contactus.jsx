@@ -15,7 +15,7 @@ const ContactUsSection = () => {
           </p>
           <div className="space-y-4 text-gray-200 text-lg">
             <p>
-              <span className="font-semibold">Email:</span> contact@homeofinnovation.com
+              <span className="font-semibold">Email:</span> contact@NFI.com
             </p>
             <p>
               <span className="font-semibold">Phone:</span> +237 672 320 608

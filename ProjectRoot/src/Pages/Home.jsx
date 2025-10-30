@@ -19,11 +19,11 @@ const HomePage = () => {
   {/* Left content */}
   <div className="relative z-10 flex-1 text-center md:text-left mt-5 space-y-6">
     <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-      Welcome to <span className="text-blue-400">Home of Innovation</span>
+      Welcome to <span className="text-blue-400">Next Future Intervention</span>
     </h1>
     <p className="text-gray-200 text-lg md:text-xl max-w-md mx-auto md:mx-0">
       We blend creativity and technology to craft impactful digital solutions that
-      transform your ideas into success.
+      transform your ideas into success and we empower digital the future with smart tech
     </p>
     <button className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white py-3 px-8 rounded-full shadow-lg hover:shadow-blue-500/50">
       Learn More

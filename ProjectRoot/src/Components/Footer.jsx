@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-[1300px] mx-auto grid md:grid-cols-3 gap-8">
         {/* About */}
         <div className="space-y-4">
-          <h3 className="text-2xl font-bold text-blue-400">Home of Innovation</h3>
+          <h3 className="text-2xl font-bold text-blue-400">Next Future Intervention</h3>
           <p className="text-gray-300">
             Crafting innovative digital solutions with creativity and technology. Let’s build something amazing together.
           </p>
@@ -36,13 +36,13 @@ const Footer = () => {
         <div className="space-y-4">
           <h4 className="text-xl font-semibold text-blue-400">Contact</h4>
           <p className="text-gray-300">123 Innovation Lane, Yaoundé, Cameroon</p>
-          <p className="text-gray-300">Email: contact@homeofinnovation.com</p>
-          <p className="text-gray-300">Phone: +237 6XX XXX XXX</p>
+          <p className="text-gray-300">Email: contact@NFI.com</p>
+          <p className="text-gray-300">Phone: +237 672 320 608</p>
         </div>
       </div>
 
       <div className="mt-10 text-center text-gray-500 border-t border-gray-700 pt-6">
-        &copy; {new Date().getFullYear()} Home of Innovation. All rights reserved.
+        &copy; {new Date().getFullYear()} Next Future Intervention. All rights reserved.
       </div>
     </footer>
   );

@@ -10,7 +10,7 @@ const testimonials = [
     name: "John Doe",
     role: "CEO, TechCorp",
     feedback:
-      "Home of Innovation transformed our digital presence. The team is creative, skilled, and extremely professional.",
+      "Next Future Intervention transformed our digital presence. The team is creative, skilled, and extremely professional.",
     image: InnovationImg, // replace with your assets
   },
   {

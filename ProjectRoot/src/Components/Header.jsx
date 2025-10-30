@@ -20,7 +20,7 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center space-x-3">
           <img src={HeroImg} alt="HIN" className="w-12 h-12 rounded-full border-2 border-blue-400" />
-          <p className="font-extrabold text-[28px] text-white tracking-wide">DB<span className="text-blue-400">.</span></p>
+          <p className="font-extrabold text-[28px] text-white tracking-wide">NFI<span className="text-blue-400">.</span></p>
         </div>
 
         {/* Desktop Links */}

@@ -28,8 +28,8 @@ const AboutCEO = () => {
           </h2>
           <p className="text-blue-400 font-semibold text-lg">Founder & Visionary</p>
           <p className="text-gray-300 text-lg leading-relaxed">
-            ATEBA OTABELA JEAN PATRICE founded Home of Innovation with a vision to merge creativity and technology. 
-            With over 10 years of experience in digital solutions, he has led numerous projects 
+            ATEBA OTABELA JEAN PATRICE founded Next Future Intervention with a vision to merge creativity and technology. 
+            With over 5 years of experience in digital solutions, he has led numerous projects 
             that transformed ideas into successful businesses.
           </p>
 

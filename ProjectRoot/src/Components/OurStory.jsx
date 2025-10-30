@@ -11,7 +11,7 @@ const OurStory = () => {
             Our <span className="text-blue-400">Story</span>
           </h2>
           <p className="text-gray-300 text-lg md:text-xl">
-            At Home of Innovation, we started with a vision to blend creativity and technology.
+            At Next Future Intervention, we started with a vision to blend creativity and technology.
             Over the years, our passion has grown into crafting digital solutions that empower businesses
             and transform ideas into reality.
           </p>
